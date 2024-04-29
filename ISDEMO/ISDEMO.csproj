@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <Nullable>enable</Nullable>
+        <UseWPF>true</UseWPF>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="EPPlus" Version="7.1.0" />
+      <PackageReference Include="Microsoft.Office.Interop.Excel" Version="15.0.4795.1001" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="model\PartArrangmentInfo.cs" />
+      <Compile Remove="model\PreArrangementInfo.cs" />
+      <Compile Remove="model\ReportInfo.cs" />
+      <Compile Remove="Test\Manager.cs" />
+      <Compile Remove="Test\**" />
+      <Compile Remove="model\RawMaterial.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Test\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Page Remove="Test\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Test\**" />
+    </ItemGroup>
+
+</Project>
